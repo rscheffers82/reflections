@@ -1,0 +1,14 @@
+Commit with the bug 	547f417
+Prior commit without	71d5270
+
+
+Commit with the bug	003c8c197
+Prior commit without	746f762e3
+
+when comparing to find the bug use the following command:
+git diff bugfree bug
+git diff 746f762e3 003c8c197
+
+Going back to a version that introduced the bug
+git checkout 003c8c197
+<action> update the code accordingly

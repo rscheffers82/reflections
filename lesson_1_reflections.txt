@@ -1,0 +1,52 @@
+Insights in using comparison tools like diff -u and fc:
+Using diff -u in unix and fc on windows helps to quickly see the parts that are changed, and compare those.
+
+Q: How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+- When code stops working you go back to an older version and tada it works again
+- easily make comparisons between versions to see where things broke
+
+Q: What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+Pros:
+- Commits make sense (per feature, fix)
+- you are in control
+Cons:
+- Up for user error
+- differences between two people, different standards
+
+Q: Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+- Git is build for that, a different usage than google docs
+- You want to see changes in all files, not just one as the changes relate to each other
+
+Q: How can you use the commands git log and git diff to view the history of files?
+- With log you can look up the commit with the changes
+- use the diff command to compare the prior commit to the one with the changes
+
+Q: How might using version control make you more confident to make changes that could break something?
+- You have the knowledge you can quickly go back a version that works
+- Also comparing the two versions will give you a quick overview in what was changes
+- this is powerful :)
+
+Q: Now that you have your workspace set up, what do you want to try using Git for?
+- New project in creating a new version of the bookmarklet and related files
+- new webdesign projects
+
+
+--- Important notes ---
+
+Collection of files is a repository
+
+commit  	-> command to mark a version, commit changes
+git log --stat	-> Show a log of all commits made --stat adds how many lines removed / added
+git diff id id2	-> compares two versions, commit id1 and commit id2
+git checkout id	-> revert back to an older version
+Copy/Paste -> CTRL/SHIFT + INSERT
+
+git log		> see the different commits
+git checkout id	> goto an older commit to see if the code was working, if it is still broken go back another version.
+git diff id id2 > compare the two and find where the mistake is made
+
+--- configuration ---
+git config --global core.editor "C:\Program Files\Sublime Text 3.sublime_text.ext -n -w"
+git config --global core.editor "'/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
