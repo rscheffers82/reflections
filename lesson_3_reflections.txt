@@ -1,0 +1,5 @@
+--- commands learned ---
+
+git init						Start a new repository
+git remote -v					show remote connections -v verbose (more info)
+git remote add origin [url]		like a repository from github to the local one and call it origin
