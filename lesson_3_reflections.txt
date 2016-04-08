@@ -3,3 +3,31 @@
 git init						Start a new repository
 git remote -v					show remote connections -v verbose (more info)
 git remote add origin [url]		like a repository from github to the local one and call it origin
+git push origin master			Push (copy) the local repository to github (origin, name; master is name of the branch)
+git pull origin master			Pull (download) the github repro to the local
+> same as 						git fetch origin
+> 								git merge master origin/master
+git fetch						pull the master/origin from github and store it locally, you'll have two branches, master and master/origin
+								(the advantage of this is that you don't need to deal with the differences right away)
+
+
+
+== Notes ==
+origin/master					Status from when you made a clone request, see also screenshot
+								or link: https://classroom.udacity.com/courses/ud775/lessons/3105028581/concepts/33526188150923
+
+
+-- Questions ---
+Q: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+- local versions might be test versions which are not to be shared with the public yet
+- you can to be in control of what version is in the remote, instead of a version in the middle of a bug fix session
+
+Q: Describe the differences between forks, clones, and branches. When would you use one instead of another?
+- Fork: you copy a respository to your github profile, use this to give credit and link back to the original source
+- Clone: used for repo's where you have access to, want to collaborate with others
+- Branch, within your repo, used to create a different version / test a feature, etc.
+
+Q: What is the benefit of having a copy of the last known state of the remote stored locally?
+- You can work offline and merge it at your own convenience
+- You know what people have contributed to the project without having to go onto the internet
+
