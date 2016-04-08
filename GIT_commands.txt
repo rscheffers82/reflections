@@ -1,26 +1,47 @@
+== GIT Commands ===
 
-init		-> start a reppository
-commit  	-> command to mark a version, commit changes
-git log --stat	-> Show a log of all commits made --stat adds how many lines removed / added
-git diff id id2	-> compares two versions, commit id1 and commit id2
-git checkout id	-> revert back to an older version
+init					start a reppository
+commit 					command to mark a version, commit changes
+git log --stat				Show a log of all commits made --stat adds how many lines removed / added
+git diff id id2				compares two versions, commit id1 and commit id2
+git checkout id				revert back to an older version
 Copy/Paste -> CTRL/SHIFT + INSERT
 
-git log		> see the different commits
-git checkout id	> goto an older commit to see if the code was working, if it is still broken go back another version.
-git diff id id2 > compare the two and find where the mistake is made
+git log					see the different commits
+git checkout id				goto an older commit to see if the code was working, if it is still broken go back another version.
+git diff id id2				compare the two and find where the mistake is made
 
---- configuration ---
-git config --global core.editor "C:\Program Files\Sublime Text 3.sublime_text.ext -n -w"
-git config --global core.editor "'/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl' -n -w"
-git config --global push.default upstream
-git config --global merge.conflictstyle diff3
+git status				What has changed since the last commit
+git add					add files to the repository
+git diff				Displays difference between working dir and staging area
+git diff --staged			Displays difference between staging area and last commit
+git reset --hard			Undo all changes to the working directory and staging area
+git branch				list all branches
+git branch easy				create a branch called easy
+git checkout easy			swith to the easy branch
+git log --graph --oneline master coins	view master and coins branches visually
+git checkout -b new_branch_name		in a detached head state (prior commit) create a new branch
+					This combines two commands
+					- git branch new_branch_name		(create new branch)
+					- git checkout branch new_branch_name	(enter, checkout this branch)
+git merge master coins			Merge the coins branch into the master one
+git branch -d coins			Delete the coins branch
+git show 012ed34			Only show difference between the commit specified and its originator
+					This helps when two branches are merged and commits interweave
+git merge --abort			cancel the merge due to issues
+					https://classroom.udacity.com/courses/ud775/lessons/2969618657/concepts/29892386280923
 
-when comparing to find the bug use the following command:
-git diff bugfree bug
-git diff 746f762e3 003c8c197
+
+--- Checking a bug ---
+git diff bugfree bug			Use when comparing to find the bug
+git diff 746f762e3 003c8c197		As above, now with IDs
 
 Going back to a version that introduced the bug
 git checkout 003c8c197
 <action> update the code accordingly
 
+--- GIT configuration ---
+git config --global core.editor "C:\Program Files\Sublime Text 3.sublime_text.ext -n -w"
+git config --global core.editor "'/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
