@@ -31,3 +31,7 @@ Q: What is the benefit of having a copy of the last known state of the remote st
 - You can work offline and merge it at your own convenience
 - You know what people have contributed to the project without having to go onto the internet
 
+Q: How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+- use FTP, google docs, 
+- easier: understanding git is a bit of a learning curve, not everyone has knowledge on how to work it
+- harder: much more difficult to track differences, updating multiple files is harder in FTP or google docs
