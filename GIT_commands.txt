@@ -31,6 +31,14 @@ git show 012ed34			Only show difference between the commit specified and its ori
 git merge --abort			cancel the merge due to issues
 					https://classroom.udacity.com/courses/ud775/lessons/2969618657/concepts/29892386280923
 
+Create a GitHub page
+https://help.github.com/articles/creating-project-pages-manually/
+
+Create a gh-pages branch
+remove all files from the prior branch (unsure why this is a requirement)
+Make your first, site is online at http://rscheffers82.github.io/<site name>/
+<site name> is the name of your project
+
 
 --- Checking a bug ---
 git diff bugfree bug			Use when comparing to find the bug

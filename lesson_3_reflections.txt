@@ -2,7 +2,7 @@
 
 git init						Start a new repository
 git remote -v					show remote connections -v verbose (more info)
-git remote add origin [url]		like a repository from github to the local one and call it origin
+git remote add origin [url]		link a repository from github to the local one and call it origin
 git push origin master			Push (copy) the local repository to github (origin, name; master is name of the branch)
 git pull origin master			Pull (download) the github repro to the local
 > same as 						git fetch origin
@@ -15,7 +15,11 @@ git fetch						pull the master/origin from github and store it locally, you'll h
 == Notes ==
 origin/master					Status from when you made a clone request, see also screenshot
 								or link: https://classroom.udacity.com/courses/ud775/lessons/3105028581/concepts/33526188150923
-
+Collabroating with others:
+1. Pull a latest update from master to your local machine
+2. Merge master changes into your branch (different oil)
+3. Resolve any conflict
+4. Push the branch back up to github for a final merge by the owner
 
 -- Questions ---
 Q: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
@@ -35,3 +39,11 @@ Q: How would you collaborate without using Git or GitHub? What would be easier, 
 - use FTP, google docs, 
 - easier: understanding git is a bit of a learning curve, not everyone has knowledge on how to work it
 - harder: much more difficult to track differences, updating multiple files is harder in FTP or google docs
+
+Q: When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+Different branch:
+- This way you keep the original source (often online) in tact and can share your version of the code. 
+- For trying a new feature
+Master branch:
+- Less fiddling around with pulling and pushing / merging
+- Keep the structure simpler and often used when you work along on a project
